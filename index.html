@@ -16,6 +16,13 @@
 </head>
 <body class="dark-theme">
 
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress-bar"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
     <!-- Header / Navbar -->
     <header class="header">
         <div class="container navbar">
@@ -59,7 +66,7 @@
                         Yara Alamleh
                     </h1>
                     <h2 class="hero-subtitle">
-                        Artificial Intelligence & <span class="text-gradient">Robotics Specialist</span>
+                        <span id="typed-text"></span><span class="typed-cursor">|</span>
                     </h2>
                     <p class="hero-description">
                         Graduate in AI & Robotics from Al-Balqa Applied University. Specialized in Computer Vision, Deep Learning, and Autonomous Navigation, with extensive leadership experience in mentoring robotics teams and managing IEEE initiatives.
@@ -84,6 +91,8 @@
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
+                    <div class="orbit-ring"><span class="orbit-icon"><i class="fa-solid fa-robot"></i></span></div>
+                    <div class="orbit-ring"><span class="orbit-icon"><i class="fa-solid fa-brain"></i></span></div>
                     <div class="glowing-circle"></div>
                     <div class="hero-image-container">
                         <!-- User Professional Photo -->
@@ -95,6 +104,39 @@
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,8.75,57.05,18.3,88.43,26.85,155.09,45,223,59.3,321.39,56.44Z" class="shape-fill"></path>
                 </svg>
+            </div>
+        </section>
+
+        <!-- Stats Bar Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card" data-target="50">
+                        <i class="fa-solid fa-users stat-icon"></i>
+                        <div class="stat-number"><span class="counter">0</span>+</div>
+                        <div class="stat-label">Students Mentored</div>
+                    </div>
+                    <div class="stat-card" data-target="10">
+                        <i class="fa-solid fa-university stat-icon"></i>
+                        <div class="stat-number"><span class="counter">0</span>+</div>
+                        <div class="stat-label">Universities Linked</div>
+                    </div>
+                    <div class="stat-card" data-target="5">
+                        <i class="fa-solid fa-robot stat-icon"></i>
+                        <div class="stat-number"><span class="counter">0</span>+</div>
+                        <div class="stat-label">Robotics Projects</div>
+                    </div>
+                    <div class="stat-card" data-target="3">
+                        <i class="fa-solid fa-trophy stat-icon"></i>
+                        <div class="stat-number"><span class="counter">0</span>+</div>
+                        <div class="stat-label">Awards Won</div>
+                    </div>
+                    <div class="stat-card" data-target="2">
+                        <i class="fa-solid fa-earth-europe stat-icon"></i>
+                        <div class="stat-number"><span class="counter">0</span></div>
+                        <div class="stat-label">Countries Represented</div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -646,6 +688,22 @@
         </section>
 
     </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <!-- Footer -->
     <footer class="footer-bottom">
